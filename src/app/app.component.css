@@ -28,10 +28,9 @@ a:hover{
     position: relative;
     cursor: pointer;
     margin: 0 auto;
-    text-align: center;
     margin-right: 6px;
     margin-left: 6px;
-    display: inline-block;
+    display:inline-block;
     width:50px;
     height:50px;
     border: 3px solid #bdc3c7;
@@ -39,18 +38,18 @@ a:hover{
     background-position: center;
     box-sizing: border-box;
     transition: all 0.2s ease;
-    background-image: url(/src/app/Image/avengers.jpg);
-    animation: border-transform 6s linear infinite alternate forwards;
+    background-image: url(./Image/avengers.jpg);
+    animation: transform 6s linear infinite alternate forwards;
     animation-play-state: paused;
 }
-.checkbox-scnd + label{
-    background-image: url(/src/app/Image/SpiderMan.jpg);
+.checkbox.scnd + label{
+    background-image: url(./Image/SpiderMan.jpg);
 }
-.checkbox-thrd + label{
-    background-image: url(/src/app/Image/doctor-strange.jpg);
+.checkbox.thrd + label{
+    background-image: url(./Image/doctor-strange.jpg);
 }
-.checkbox-frth + label{
-    background-image: url(/src/app/Image/captain-america.jpg);
+.checkbox.frth + label{
+    background-image: url(./Image/captain-america.jpg);
 }
 .checkbox:checked + label{
     box-shadow: 0 8px 25px 0 rgba(16, 39, 112, 0.3);
@@ -59,7 +58,7 @@ a:hover{
     -moz-animation-play-state: running;
     animation-play-state: running;
 }
-@keyframes border-transform {
+@keyframes transform{
     0%,
     100%{
         border-radius: 63%, 37%, 54%, 46% / 55%, 48%, 52%, 45%;
@@ -112,15 +111,16 @@ ul li{
     border: 5px solid #bdc3c7;
     background-size: cover;
     background-position: center;
-    background-image: url(/src/app/Image/avengers.jpg);
+    background-image: url(./Image/avengers.jpg);
     border-radius: 50%;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    font-weight:900;
-    font-size:24px;
+    font-weight:800;
+    font-size:30px;
+    text-align: center;
     letter-spacing:2px;
     line-height:2.7;
-    color: #343434;
+    color: #303030;
     writing-mode: vertical-rl;
     opacity: 0;
     pointer-events: none;
@@ -129,34 +129,52 @@ ul li{
     transition: all 0.5s ease;
 }
 ul li span{
-    mix-blend-mode: difference;
+    mix-blend-mode:hard-light;
 }
-ul li span:nth-child(2){
-    background-image: url(/src/app/Image/SpiderMan.jpg);
+ul li:nth-child(2){
+    background-image: url(./Image/SpiderMan.jpg);
 }
-ul li span:nth-child(3){
-    background-image: url(/src/app/Image/doctor-strange.jpg);
+ul li:nth-child(3){
+    background-image: url(./Image/doctor-strange.jpg);
 }
-ul li span:nth-child(4){
-    background-image: url(/src/app/Image/captain-america.jpg);
+ul li:nth-child(4){
+    background-image: url(./Image/captain-america.jpg);
 }
-.checkbox-frst:checked ~ ul li span:nth-child(1){
+#slide-1:checked ~ ul li:nth-child(1){
     opacity: 1;
     pointer-events: auto;
     border-radius:16px;
 }
-.checkbox-scnd:checked ~ ul li span:nth-child(2){
+#slider-2:checked + ul li:nth-child(2){
     opacity: 1;
     pointer-events: auto;
     border-radius:16px;
 }
-.checkbox-thrd:checked ~ ul li span:nth-child(3){
+#slider-3:checked ~ ul li:nth-child(3){
     opacity: 1;
     pointer-events: auto;
     border-radius:16px;
 }
-.checkbox-frth:checked ~ ul li span:nth-child(4){
+#slider-4:checked ~ ul li:nth-child(4){
     opacity: 1;
     pointer-events: auto;
     border-radius:16px;
+}
+@media (max-width: 768px){
+    .slider-height-padding{
+        padding-top: 340px;
+    }
+    ul li{
+        height: 300px;
+        font-size: 19px;
+        letter-spacing:1px;
+    }
+}
+@media (max-width:575px){
+    .slider-height-padding{
+        padding-top:240px;
+    }
+    .ul li{
+        height: 200px;
+    }
 }
