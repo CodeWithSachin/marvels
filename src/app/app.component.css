@@ -23,8 +23,8 @@ a:hover{
     position: absolute;
     left: -9999px;
 }
-.checkbox:checked + mat-label,
-.checkbox:not(:checked) + mat-label {
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
     position: relative;
     cursor: pointer;
     margin: 0 auto;
@@ -43,16 +43,16 @@ a:hover{
     animation: border-transform 6s linear infinite alternate forwards;
     animation-play-state: paused;
 }
-.checkbox-scnd + mat-label{
+.checkbox-scnd + label{
     background-image: url(/src/app/Image/SpiderMan.jpg);
 }
-.checkbox-thrd + mat-label{
+.checkbox-thrd + label{
     background-image: url(/src/app/Image/doctor-strange.jpg);
 }
-.checkbox-frth + mat-label{
+.checkbox-frth + label{
     background-image: url(/src/app/Image/captain-america.jpg);
 }
-.checkbox:checked + mat-label{
+.checkbox:checked + label{
     box-shadow: 0 8px 25px 0 rgba(16, 39, 112, 0.3);
     transform: scale(1.3);
     -webkit-animation-play-state: running;
