@@ -3,7 +3,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 15px;
-  line-height: 1.7;
+  /* line-height: 1.7; */
   color: #343434;
   background-color: #000;
   overflow-y: hidden;
@@ -19,14 +19,12 @@ a:hover {
   width: 100%;
   display: block;
 }
-.full-height {
-  min-height: 100vh;
-}
+
 .over-hide {
   overflow: hidden;
 }
 .padding-tb {
-  padding: 100px 0;
+  padding: 20px 0;
 }
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
@@ -113,7 +111,7 @@ ul li {
   left: 0;
   width: 100%;
   display: block;
-  z-index: 100;
+  z-index: 80;
   padding: 0;
   margin: 0;
   list-style: none;
