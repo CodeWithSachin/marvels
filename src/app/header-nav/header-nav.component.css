@@ -1,0 +1,108 @@
+nav{
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:300;
+}
+.all{
+    display: flex;
+    perspective:10px;
+    transform: translate(300px) rotate(20deg);
+    will-change: transform;
+    perspective-origin: center center;
+    transition: all 1.3s ease-out;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+.all :hover{
+    perspective: 1000px;
+    transition: all 1.3s ease-in;
+    transform:perspective(10000px) rotate(0deg);
+}
+.all:hover .text{
+    opacity: 1;
+}
+.all:hover > div{
+    opacity: 1;
+    transition-delay: 0s;
+}
+.all:hover .explainer{
+    opacity: 0;
+}
+.left, 
+.right,
+.center,
+.lefter,
+.righter{
+    width: 200px;
+    height:150px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px 5px rgba(100,100,255, 0.4);
+    opacity: 0;
+    transition: all 0.3s ease;
+    transition-delay: 1s;
+    position: relative;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #58d;
+    cursor: pointer;
+    background-blend-mode: color-burn;
+}
+.left:hover, 
+.right:hover,
+.center:hover,
+.lefter:hover,
+.righter:hover{
+    box-shadow: 0 0 30px 10px rgba(100,100,255, 0.6);
+    background-color: #ccf;
+}
+.text{
+    transform: translateY(30px);
+    opacity: 0;
+    transition:all 0.3s ease;
+    bottom: 0;
+    left: 5px;
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(100, 100, 255,0.6);
+}
+.lefter{
+    transform: translateY(-60px) translateZ(-50px) rotateX(-10deg);
+
+}
+.left{
+    transform: translateY(-30px) translateZ(-25px) rotateX(-5deg);
+
+}
+.center{
+    opacity: 1;
+
+}
+.right{
+    transform: translateY(30px) translateZ(25px) rotateX(5deg);
+
+}
+.righter{
+    transform: translateY(60px) translateZ(50px) rotateX(10deg);
+
+}
+.explainer{
+    font-weight:300px;
+    font-size:2rem;
+    color: #fff;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 100%;
+    background-color: #303050;
+    border-radius:10px;
+    text-shadow: 0 0 10px rgba(100, 100, 255, 0.8);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
